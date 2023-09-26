@@ -1,0 +1,20 @@
+.user-profile-card {
+  margin-bottom: 50px;
+  @include breakpoint(phone-portrait){
+    margin-bottom: 30px;
+  }
+  .btn {
+    @include breakpoint(phone-portrait){
+      padding: 0.25rem 0.5rem;
+      font-size: 0.75rem;
+      line-height: 1.5;
+      border-radius: 0;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .user-profile-card div:first-child {
+    margin-bottom: 1.5em;
+  }
+}

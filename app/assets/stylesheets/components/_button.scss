@@ -1,0 +1,20 @@
+.btn {
+  border-radius: 3px;
+}
+
+.btn-wide {
+  padding-left: 10em;
+  padding-right: 10em;
+}
+
+@media (max-width: 570px) {
+  .btn-wide {
+    padding-left: 4em;
+    padding-right: 4em;
+    font-size: 1.1em;
+  }
+}
+
+.stripe-button-el {
+  margin-top: 10px;
+}

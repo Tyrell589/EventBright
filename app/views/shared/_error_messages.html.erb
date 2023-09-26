@@ -1,0 +1,7 @@
+<% if resource.errors.any? %>
+  <ul>
+  <% resource.errors.full_messages.each do |message| %>
+    <li class="flash-error" ><%= message %></li>
+  <% end %>
+  </ul>
+<% end %>

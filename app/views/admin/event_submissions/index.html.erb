@@ -1,0 +1,44 @@
+<header class="main-content__header" role="banner">
+  <h1 class="main-content__page-title" id="page-title">
+    Event Submissions
+  </h1>
+</header>
+
+<section class="main-content__body main-content__body--flush">
+  <table>
+    <thead>
+      <tr>
+        <th class="cell-label" scope="col" role="columnheader">ID</th>
+        <th class="cell-label" scope="col" role="columnheader">Title</th>
+        <th class="cell-label" scope="col" role="columnheader">Administrator</th>
+        <th class="cell-label" scope="col" role="columnheader">Created At</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @events.each do |event| %>
+        <tr class="js-table-row" <%= %(tabindex=0 role=link data-url=#{admin_event_submission_path(event.id)}) %>>
+            <td class="cell-data">
+              <%= event.id %>
+            </td>
+            <td class="cell-data">
+              <%= event.title %>
+            </td>
+            <td class="cell-data">
+              User #<%= event.administrator.id %>
+            </td>
+            <td class="cell-data">
+              <%= event.creation_date_and_time %>
+            </td>
+            <td>
+              <%= link_to 'Edit', edit_admin_event_submission_path(event.id), class: "action-edit" %>
+            </td>
+            <td><%= link_to 'Destroy', admin_event_submission_path(event.id), method: :delete, data: { confirm: "Are you sure?" }, class: "text-color-red" %>
+            </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+  <%= paginate @events %>
+</section>

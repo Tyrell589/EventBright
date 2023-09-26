@@ -1,0 +1,51 @@
+  <%= yield %>
+<%= form_for resource, :html => { novalidate: true, class: "needs-validation" } do |f| %>
+
+  <div class="form-group">
+    <%= f.label 'title' %>
+    <%= f.text_field :title, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label 'description' %>
+    <%= f.text_area :description, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label 'location' %>
+    <%= f.text_field :location, class: "form-control" %>
+  </div>
+
+  <div class=" form-group">
+    <%= f.label 'starting_date' %>
+    <%= f.text_field :starting_date, class: "form-control", id: "datepicker" %>
+  </div>
+
+  <div class=" form-group">
+    <%= f.label 'starting_time' %>
+    <%= f.text_field :starting_time, class: "form-control", id: "timepicker" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label 'duration' %>
+    <%= f.time_select :duration, minute_step: 5, include_seconds: false, ignore_date: true, prompt: { hour: 'Hour', minute: 'Minute' }, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label 'price' %>
+    <%= f.number_field :price, in: 0...1000, class: "form-control" %>
+  </div>
+
+  <% resource.event_images.each do |img| %>
+    <%= image_tag img, size: 200  %>
+    <%= link_to 'delete', event_image_path(resource, img), method: :delete, class:'btn btn-danger' %>
+  <% end %>
+
+  <div class="form-group">
+    <%= f.label :images %><br>
+    <%= f.file_field :images, multiple: true, accept: ".png,.jpeg,.jpg" %>
+  </div>
+
+  <%= submit_tag "Submit", class:"btn btn-primary" %>
+
+<% end %>

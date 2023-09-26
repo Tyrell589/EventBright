@@ -1,0 +1,12 @@
+<div class="clear-absolute"></div>
+
+<div class="container">
+  <%= render partial: "event_listing", locals: { event: @event, amount: @amount } %>
+  <%= render partial: "comments/comment_section", locals: { commentable: @event } %>
+</div>
+
+<div class="event-page-bg">
+  <div class="img-wrapper">
+    <%= render partial: "background_img_blur", locals: { event: @event } %>
+  </div>
+</div>

@@ -1,0 +1,1 @@
+Administrate::Engine.add_stylesheet('administrate_custom_style.css')

@@ -1,0 +1,32 @@
+.presentation-panel {
+  margin-bottom: 50px;
+  border-radius: 3px;
+  border: none;
+  box-shadow: 0 16px 64px -16px rgba(46,55,77,.1);
+  h3 {
+    color: #000;
+    margin-bottom: 1em;
+    @include breakpoint(tablet-portrait){
+      font-size: 1.7em;
+    }
+    @include breakpoint(phone-portrait){
+      font-size: 1.5em;
+    }
+  }
+  @include breakpoint(phone-portrait){
+    margin-bottom: 30px;
+  }
+}
+
+.presentation-panel div:nth-child(2) {
+  padding: 1.5em;
+}
+
+@media screen and (min-width: 991px) { 
+  .presentation-panel img {
+    margin: 0;
+  }
+  .presentation-panel .col-lg-6 {
+    padding-left: 0;
+  }
+}

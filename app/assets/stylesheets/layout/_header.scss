@@ -1,0 +1,53 @@
+#main-nav {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  min-width: 250px;
+  height: 55px;
+  z-index: 100;
+  padding: 0;
+  @include dark-transparent-bg;
+  @include breakpoint(phone-landscape) {
+    padding: 0 2em;
+  }
+}
+
+#nav-content {
+  @media (max-width: 991.98px) {
+    @include dark-transparent-bg;
+    padding: 0 10px 10px 10px;
+  }
+}
+
+.navbar-brand {
+  font-size: 1.3rem;
+  font-weight: 700;
+  padding: 12px 0;
+}
+
+#main-nav .nav-item .nav-link {
+  text-transform: uppercase;
+  margin-left: 12px;
+  font-weight: 400;
+  color: #fff;
+}
+
+#main-nav .dropdown-item {
+  line-height: 1.8rem;
+  color: #fff;
+  transition: background 0.4s ease-out;
+}
+
+#main-nav .dropdown-item:hover {
+  background-color: rgb(23, 20, 31);
+}
+
+#main-nav .dropdown-menu.show{
+  @include dark-transparent-bg;
+  padding: 0;
+}
+
+.dropdown-divider {
+  border-top-color: rgb(12, 11, 11);
+  margin: 0;
+}

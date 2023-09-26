@@ -1,0 +1,10 @@
+<div class="event-listing">
+  <%= render partial: "card_presentation_panel", locals: { event: event, amount: amount } %>
+  <%= render partial: "event_link_panel", locals: { event: event } %>
+
+  <div class="event-description">
+    <p class ="text-muted">Posted on <%= @event.creation_date_and_time %></p>
+    <h3>About this event</h3>
+    <p><%= event.description %></p>
+  </div>
+</div>

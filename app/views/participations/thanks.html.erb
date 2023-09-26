@@ -1,0 +1,11 @@
+<%= render partial: "shared/banner", locals: { title: "Thank You !" } %>
+
+<div class="container">
+  <h3 class="text-center">Successful Payment</h3>
+  <% unless @event.is_free? %>
+    <p>You paiment of <%= pretty_amount(@amount) %> has been accepted !</p>
+  <% end %>
+  <p>You are now part of the event: <%= @event.title %> ! You joined <%= @event.participants.count %> other participant(s)</p>
+  <p>Go back to the event's page: <%= link_to @event.title, @event %></p>
+  <p>Go back to Home page: <%= link_to 'Home', root_path %></p>
+</div>

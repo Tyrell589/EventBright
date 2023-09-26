@@ -1,0 +1,9 @@
+<% banner_img ||= false %>
+<section class="banner">
+  <div class="flex-container overlay d-flex align-items-end">
+    <div class="content container">
+      <h3><%= title %></h3>
+    </div>
+  </div>
+  <%= render partial: "shared/banner_img", locals: { banner_img: banner_img } %>
+</section>

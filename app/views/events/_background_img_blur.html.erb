@@ -1,0 +1,5 @@
+<% if @event.images.attached? %>
+  <%= image_tag url_for(event.images.first), class: "event-bg-img" %>
+<% else %>
+  <%= image_tag "default-event-image", class: "event-bg-img" %>
+<% end %>

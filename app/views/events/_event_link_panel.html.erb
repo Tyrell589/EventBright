@@ -1,0 +1,20 @@
+<% if current_user_is_administrator?(event) %>
+<div class="row">
+  <div class="col-12 d-flex event-link-panel">
+    <%= link_to "Event Dashboard", participations_path(event_id: event.id), class: 'btn btn-lg btn-success' %><br />
+  </div>
+</div>
+<% elsif current_user_already_participant?(event) %>
+<div class="row">
+  <div class="col-12 d-flex event-link-panel">
+    <%= link_to "Cancel participation", participation_path(current_user_participation(event).id), method: :delete, class:'btn btn-lg btn-danger' %><br />
+  </div>
+</div>
+<% else%>
+<div class="row">
+  <div class="col-12 d-flex event-link-panel">
+    <%= link_to "Join the event !", new_participation_path(event_id: event.id), class: 'btn btn-lg btn-primary' %><br />
+  </div>
+</div>
+<% end %>
+

@@ -1,0 +1,13 @@
+@mixin breakpoint($point) {
+  @if $point == very-small-screen {
+    @media only screen and (max-width: 320px) { @content ; }
+  }@else if $point == phone-portrait {
+    @media only screen and (max-width: 480px) { @content ; }
+  }@else if $point == phone-landscape {
+    @media only screen and (max-width: 690px)  { @content ; }
+  }@else if $point == tablet-portrait {
+    @media only screen and (max-width: 960px) { @content ; }
+  }@else if $point == tablet-landscape {
+    @media only screen and (max-width: 1300px)  { @content ; }
+  }
+}

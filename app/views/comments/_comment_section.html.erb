@@ -1,0 +1,13 @@
+<section class="comments">
+  <div class="text-center">
+    <h2 >Comments:</h2>
+  </div>
+
+  <div class="comment-form">
+    <%= render partial: "comments/form", locals: { commentable: commentable } %>
+  </div>
+
+  <div class="nested-comments">
+    <%= render partial: "comments/comments", locals: { commentable: commentable } %>
+  </div>
+</section>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>EventBright</title>
+    <meta property="og:image" content='https://res.cloudinary.com/cloudfilestorage/image/upload/v1618177926/eventbrite/eventbright_srs7mc.png'/>
+    <meta name="author" content="Georges Atalla">
+    <meta name="description" property="og:description" content="Clone of eventbrite.fr built with Ruby on Rails !">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= favicon_link_tag 'icons/EventBright.ico' %>
+                 <%# Datepicker %>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link rel="stylesheet" type="text/css" href="https://npmcdn.com/flatpickr/dist/themes/material_blue.css">
+    <%= stylesheet_link_tag 'application', media: 'all' %>
+  </head>
+  <body>
+    <%= render "header" %>
+    <%= render "alert" %>
+    <%= yield %>
+    <%= render "footer" %>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <%= javascript_include_tag 'application' %>
+  </body>
+</html>

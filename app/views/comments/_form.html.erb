@@ -1,0 +1,6 @@
+<%= form_for [commentable, Comment.new], :html => { novalidate: true, class: "needs-validation" } do |f| %>
+  <div class="form-group">
+    <%= f.text_area :content, class: "form-control", row: "3", placeholder: "Add a comment" %>
+  </div>
+  <%= f.submit "Submit", class:"btn btn-primary" %>
+<% end %>

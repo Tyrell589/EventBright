@@ -1,0 +1,13 @@
+#showcase-carousel {
+  height: 100%;
+  .carousel-inner,
+  .carousel-item {
+    width: 100%;
+    height: 100%;
+  }
+  .carousel-img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+}

@@ -1,0 +1,11 @@
+<div class="clear-absolute"></div>
+<div class="container">
+<div class="text-center">
+  <h2 class="my-4">Latest Events</h2>
+</div>
+  <%= render partial: "events/event_card_list", locals: {events: @events} %>
+
+  <div class="text-center">
+    <%== pagy_bootstrap_nav(@pagy) %>
+  </div>
+</div>

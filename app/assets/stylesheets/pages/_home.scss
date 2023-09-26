@@ -1,0 +1,67 @@
+#showcase {
+  height: 70vh;
+  position: relative;
+}
+
+#showcase .flex-container {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+} 
+
+#showcase .content {
+  text-align: center;
+}
+
+#showcase h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1rem !important;
+  font-weight: 700;
+  text-shadow: 2px 4px 4px rgba(0,0,0,.2),0 -5px 10px hsla(0,0%,100%,.15);
+}
+
+#showcase p {
+  font-size: 1.2rem;
+  text-shadow: 2px 4px 4px rgba(0,0,0,.2),0 -5px 10px hsla(0,0%,100%,.15);
+  margin-bottom: 2.5rem !important;
+}
+
+#showcase .btn {
+  box-shadow: 2px 4px 4px rgba(0,0,0,.2),0 -5px 10px hsla(0,0%,100%,.15);
+  text-transform: uppercase;
+  letter-spacing: .02em;
+}
+
+@media screen and (max-width: 1200px) {
+  #showcase h1 {
+    font-size: 3rem;
+  }
+  #showcase p {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  #showcase h1 {
+    font-size: 2.5rem;
+  }
+  #showcase p {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  #showcase h1 {
+    font-size: 2rem;
+  }
+  #showcase p {
+    font-size: 1rem;
+    margin-bottom: 1.8rem !important;
+  }
+  
+  #showcase .btn {
+    font-size: .9rem;
+    letter-spacing: .02em;
+  }
+}

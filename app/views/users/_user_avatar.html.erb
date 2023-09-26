@@ -1,0 +1,7 @@
+<% image_class ||= "" %>
+
+<% if local_assigns[:size] %>
+  <%= image_tag(user_avatar(user), alt: 'user-avatar', class: image_class, size: size) %>
+<% else %>
+  <%= image_tag(user_avatar(user), alt: 'user-avatar', class: image_class) %>
+<% end %>

@@ -1,0 +1,13 @@
+<%# Showcase %>
+
+<%= render "static_pages/showcase" %>
+
+<%# Main content %>
+
+<div class="container">
+  <h2 class="my-4">Latest Events</h2>
+  <%= render partial: "events/event_card_list", locals: { events: @events } %>
+  <div class="text-center">
+    <%= link_to "See More", events_path, class: "btn btn-outline-primary btn-lg btn-wide" %>
+  </div>
+</div>

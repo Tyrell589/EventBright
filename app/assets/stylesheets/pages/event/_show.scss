@@ -1,0 +1,30 @@
+.event-bg-img {
+  width: 100%;
+  height: 100%;
+  -webkit-filter: blur(50px);
+  -moz-filter: blur(50px);
+  -o-filter: blur(50px);
+  -ms-filter: blur(50px);
+  filter: blur(50px);
+  margin: -1px;
+  padding: 1px;
+  object-fit: cover;
+  @media screen and (max-width: 576px) {
+    display: none;
+  }
+}
+
+.event-page-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width:100%;
+  background-color: #F8F8F8;
+  z-index: -1;
+}
+
+.img-wrapper {
+  height: 70vh;
+  overflow: hidden;
+}

@@ -1,0 +1,17 @@
+.center {
+  text-align: center; 
+}
+
+.btn-validate-action {
+  background: #75d607 !important; 
+    &:hover {
+    background: #3ea018 !important;
+  }
+}
+
+.btn-unvalidate-action {
+  background: #d10a0a  !important; 
+    &:hover {
+    background: #9e0707!important;
+  }
+}

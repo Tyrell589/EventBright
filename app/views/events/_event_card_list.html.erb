@@ -1,0 +1,11 @@
+<div class="row">
+  <% events.each do |event| %>
+  <div class="col-item col-xl-3 col-lg-4 col-sm-6">
+    <% if local_assigns[:display_status] %>
+      <%= render partial: "events/event_card", locals: {event: event, display_status: display_status } %>
+    <% else %>
+      <%= render partial: "events/event_card", locals: {event: event } %>
+    <% end %>
+  </div>
+  <% end %>
+</div>

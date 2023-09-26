@@ -1,0 +1,21 @@
+.comments {
+  border-radius: 7px;
+  background-color: #fff;
+  padding: 1em 2em;
+  @media screen and (max-width: 576px) {
+    padding: .5em .75em;
+  }
+}
+.commenter-username {
+  font-weight: 700; 
+}
+.comment-form {
+  margin-bottom: 30px;
+}
+
+.nested-comments {
+  padding: 0 30px;
+  @media screen and (max-width: 576px) {
+    padding: 0;
+  }
+}

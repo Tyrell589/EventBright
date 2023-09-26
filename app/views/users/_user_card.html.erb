@@ -1,0 +1,15 @@
+<li class="user-card-list-item media">
+    <%= render partial: "users/user_avatar", locals: { 
+                                               user: user,
+                                               image_class: "mr-4 ml-1 rounded-circle align-self-center",
+                                               size: "80" 
+                                              } 
+    %>
+
+  <div class="media-body">
+   <span class="text-muted"><%= time_ago_in_words(participation.created_at) %></span>
+    <p><%= user.username %></p>
+    <p><%= user.email %></p>
+  </div>
+</li>
+    

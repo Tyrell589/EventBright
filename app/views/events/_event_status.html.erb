@@ -1,0 +1,5 @@
+<% if event.validated? %>
+  <p class="text-success"><%= display_status(event) %></p>
+<% else%>
+  <p class="text-danger"><%= display_status(event) %></p>
+<% end %>

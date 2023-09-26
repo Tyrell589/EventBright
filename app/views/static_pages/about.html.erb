@@ -1,0 +1,74 @@
+<%= render partial: "shared/banner", locals: { title: "About" } %>
+
+<div class="container">
+  <div class="text-center">
+    <h2>Georges ATALLA</h2>
+  </div>
+  <%= render layout: "static_pages/presentation_panel" do %>
+    <div class="text-center">
+      <h3>Ruby on Rails developer</h3>
+    </div>
+    <p>Hi there! I'm a Ruby on Rails developer, I also love JavaScript, HTML & CSS !</p>
+    <p>This is actually one of my project, a full CRUD RoR Eventbrite clone !</p>
+    <p>Checkout my porfolio that I've created from scratch: <%= link_to 'georgesatalla.com', 'https://www.georgesatalla.com/', target:"_blank" %></p>
+  <% end %>
+
+  <!-- Projects -->
+  <div class="text-center">
+    <h2>My other projects</h2>
+  </div>
+  
+    <div class="row">
+             <!-- ShareMyHobby -->
+      <div class="col-lg-4 mb-4">
+        <div class="card card-presentation card-regular">
+          <%= link_to "https://share-my-hobby-production.herokuapp.com/",target: :_blank, class:"card-img-link" do %>
+            <%= image_tag "sharemyhobby.png", alt:'tictactoe', class: "card-img"%>
+          <% end %>
+          <div class="card-body">
+            <h4 class="card-title">
+              <%= link_to "ShareMyHobby", "https://share-my-hobby-production.herokuapp.com/", target: :_blank %>
+            </h4>
+            <p class="card-text">Large Ruby on Rails team project after a 3 months bootcamp.</p>
+            <%= link_to "See on Github", "https://github.com/Ggs91/ShareMyHobby", target:"_blank", class:"card-link" %>
+            <%= link_to "See Live", "https://share-my-hobby-production.herokuapp.com/", target:"_blank", class:"card-link"  %>
+          </div>
+        </div>
+      </div>
+             <!-- TicTacToe-->
+      <div class="col-lg-4 mb-4">
+        <div class="card card-presentation card-regular">
+          <%= link_to "https://ggs91.github.io/JS-TicTacToe/dist/index.html", target: :_blank, class:"card-img-link" do %>
+            <%= image_tag "tictactoejs.png", alt: "tictactoe", class: "card-img" %>
+          <% end %>
+          <div class="card-body">
+            <h4 class="card-title">
+              <%= link_to "TicTacToe in vanilla JS", "https://ggs91.github.io/JS-TicTacToe/dist/index.html", target: :_blank %>
+            </h4>
+            <p class="card-text">Game logic and front end from scratch.</p>
+            <%= link_to "See on Github", "https://github.com/Ggs91/JS-TicTacToe", target:"_blank", class:"card-link" %>
+            <%= link_to "See Live", "https://ggs91.github.io/JS-TicTacToe/dist/index.html", target:"_blank", class:"card-link" %>
+          </div>
+        </div>
+      </div>
+             <!-- Secretlab-->
+      <div class="col-lg-4 mb-4">
+        <div class="card card-presentation card-regular">
+          <%= link_to "https://ggs91.github.io/secretlab_static_page_replica/", target: :_blank, class:"card-img-link" do %>
+            <%= image_tag "secretlab.png", alt:"secretlab", class: "card-img" %>
+          <% end %>
+          <div class="card-body">
+            <h4 class="card-title">
+              <%= link_to "Secretlab blog webpage", "https://ggs91.github.io/secretlab_static_page_replica/", target: :_blank %>
+            </h4>
+            <p class="card-text">A static webpage replica of Secretlab blog.</p>
+            <%= link_to "See on Github", "https://github.com/Ggs91/secretlab_static_page_replica", target:"_blank", class:"card-link" %>
+            <%= link_to "See Live", "https://ggs91.github.io/secretlab_static_page_replica/", target:"_blank", class:"card-link"  %>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <!-- /.row -->
+</div>
+    <!-- /.container -->

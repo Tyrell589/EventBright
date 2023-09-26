@@ -1,0 +1,14 @@
+<div class="card card-presentation">
+  <%= link_to event_path(event.id), class: "card-img-link" do %>
+    <% display_event_images(event, "card-img").first %>
+  <% end %>
+  <div class="card-body">
+    <% if local_assigns[:display_status] %>
+      <%= render partial: 'events/event_status', locals: { event: event } %>
+    <% end %>
+    <p class="starting-date mb-2"><%= event.starting_date_time %></p>
+    <p class="card-title">
+      <%= link_to event.title, event_path(event.id) %>
+    </p>
+  </div>
+</div>

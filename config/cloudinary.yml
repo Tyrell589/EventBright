@@ -1,0 +1,22 @@
+---
+development:
+  cloud_name: cloudfilestorage
+  api_key: <%= ENV['CLOUDINARY_API_KEY'] %>
+  api_secret: <%= ENV['CLOUNDINARY_API_SECRET'] %>
+  enhance_image_tag: true
+  static_file_support: false
+  secure: true
+production:
+  cloud_name: cloudfilestorage
+  api_key: <%= ENV['CLOUDINARY_API_KEY'] %>
+  api_secret: <%= ENV['CLOUNDINARY_API_SECRET'] %>
+  enhance_image_tag: true
+  static_file_support: true
+  secure: true
+test:
+  cloud_name: cloudfilestorage
+  api_key: <%= ENV['CLOUDINARY_API_KEY'] %>
+  api_secret: <%= ENV['CLOUNDINARY_API_SECRET'] %>
+  enhance_image_tag: true
+  static_file_support: false
+  secure: true

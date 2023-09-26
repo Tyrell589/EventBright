@@ -1,0 +1,26 @@
+.event-listing{
+  border-radius: 7px;
+  overflow: hidden;
+  margin-bottom: 40px;
+  @media screen and (max-width: 576px) {
+    margin-left: -20px;
+    margin-right: -20px;
+    margin-top: -40px;
+  }
+
+  .event-description {
+    padding: 50px 75px;
+    background-color: #fff;
+    @media screen and (max-width: 768px) {
+      padding: 25px 50px;
+    }
+
+    @media screen and (max-width: 576px) {
+      padding: 15px 20px;
+    }
+  }
+}
+
+.event-listing-wrapper {
+  // max-width: 1200px;
+}

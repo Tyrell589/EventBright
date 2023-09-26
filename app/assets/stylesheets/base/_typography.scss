@@ -1,0 +1,31 @@
+h1 {
+  font-family: 'Montserrat', sans-serif;
+}
+
+h2 {
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.8em;
+  font-size: 2.2em;
+  color: var(--primary);
+  margin-bottom: 1.2em;
+  @include underly(var(--primary));
+  @include breakpoint(phone-portrait) {
+    font-size: 1.7em;
+    line-height: 1.5;
+  }
+}
+
+
+h3 {
+  @include breakpoint(phone-portrait) {
+    font-size: 1.4em;
+    line-height: 1.5;
+  }
+}
+
+p {
+  @include breakpoint(phone-portrait) {
+    font-size: .9em;
+    margin-bottom: .5em;
+  }
+}

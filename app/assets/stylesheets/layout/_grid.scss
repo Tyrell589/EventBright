@@ -1,0 +1,6 @@
+/* Override bootstrap container max-width for 1200px and up*/
+@media (min-width: 1500px) { 
+.container {
+    max-width: 1400px;
+  }
+}
